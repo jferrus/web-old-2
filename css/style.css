@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #31af0a;
+    --secondary-color: #f8f9fa;
+    --tertiary-color: black;
+    --quaternary-color: #075cb1;
+    --link-color: #8bee6d;
+}
+
+#por-que {
+    overflow-x: scroll;
+    display: block; /* Cambiado de block a flex */
+    width: 100%;
+    height: 100vh;
+    white-space: nowrap; /* Evita que los elementos se envuelvan al siguiente renglón */
+    font-size: 0px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-wrapper {
+    height:     100%;
+    width:      100%;
+    display: inline-block;
+    position: relative;
+}
+
+ .imagen-scroll {
+    height: 100%;
+    width: 100%;
+     object-fit: cover;
+     z-index: 0;
+     margin: 0px auto;
+}
+
+ .image-wrapper .text-image {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    width: 60%; /* Adjust width as needed */
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    margin: 0px auto; /* Centering the text-image, adjust margin as needed */
+    transform: translate(-50%, -50%); /* Center vertically and horizontally if needed */
+    white-space: normal; /* Ensure text wraps */
+}
+.text-image h5 {
+    font-size: 50px;
+
+}
+
+.layer-over {
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    margin: 0px auto;
+
+}
+
+.custom-nav {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 5;
+    position: absolute;
+    width: 99%;
+}
+
+.custom-nav .navbar-nav {
+    margin-right: 30px;
+}
+
+.custom-nav a {
+    color: white;
+    font-size: 30px;
+}
+
+.custom-nav .navbar-brand {
+    margin-left: 30px;
+}
+.custom-nav a:visited {
+    color: white;
+}
+
+.custom-nav a:hover {
+    color: var(--link-color);
+}
+
+.service-img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--tertiary-color);
+    color: white;
+    min-height: 150px;
+}
+
+.pie-pagina {
+    background-color: var(--quaternary-color);
+    color: white;
+    padding: 40px;
+}
+
+.pie-pagina a {
+    color: white;
+}
+
+.pie-pagina a:hover {
+    color: var(--link-color);
+}
+
+#como img {
+
+    margin: 0px auto;
+    object-fit: cover;
+}
+
+#como .valor {
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#como .valor div {
+    font-size: 50px;
+}
+
+#como .texto-valor {
+    padding-left: 60px;
+}
+
+#como .valor h1 {
+    font-size: 70px;
+}
+
+.bg-blue {
+    background-color: var(--quaternary-color);
+    color: white;
+}
+
+.bg-red {
+    background-color: var(--tertiary-color);
+    color: white;
+
+}
+
+.bg-green {
+    background-color: var(--primary-color);
+    color: white;
+
+
+}
+
+.social-icon img {
+    height: 50px;
+    width: 50px;
+    padding: 7px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+
+
+@keyframes moverTexto {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+.contacto {
+    background-color: red;
+    overflow-x: hidden;
+}
+
+.texto-rotatorio {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    color: yellow;
+    white-space: nowrap;
+    animation: moverTexto 10s linear infinite;
+  }
+
+.upper-social-icon img{
+    height: 80px;
+    width: auto;
+
+    z-index: 5;
+    padding: 10px;
+    background-color: white;
+    border-radius: 100px;
+    border: 3px solid black;
+}
+
+.upper-social-icon {
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
+    z-index: 10;
+}
+
+.button-carousel {
+    z-index: 5;
+}
+
+@media screen and (max-width: 1023px) {
+    .image-wrapper .text-image {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    .image-wrapper h5 {
+        font-size: 30px;
+    }
+
+    #como .valor div {
+        font-size: 20px;
+    }
+
+    #como .valor h1 {
+        font-size: 30px;
+    }
+
+    #como .valor div{
+        padding: 40px;
+        vertical-align: middle;
+    }
+
+
+
+    /*hide arrows*/
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none;
+    }
+
+    #que .card {
+        margin-bottom: 20px;
+    }
+
+    .custom-nav .navbar-toggler{
+       display: none;
+    }
+
+    
+
+}
